@@ -42,15 +42,13 @@ print(f"{cores['amarelo']}{estilos['negrito']}{'===' * 17}{cores['limpa']}")
 num1 = int(input("Digite 1 numero: "))
 num2 = int(input("Digite o segundo numero: "))
 
-if num1 < num2:
-    print(f"Os numeros que estao no periodo de {num1} e {num2} e de : ")
-    while num1 < num2:
-        num1 += 1
-        print(num1 - 1)
 
+menor, maior = min(num1, num2), max(num1, num2)
 
-elif num1 > num2:
-    print(f"O numeros que estao no periodo de {num1} e {num2} e de: ")
-    while num1 > num2:
-        num2 += 1
-        print(num2 - 1)
+if menor != maior:
+    print(f"Os numeros que estao no periodo de {menor} e {maior} sao: ")
+    for n in range(menor + 1, maior):
+        print(n)
+
+else:
+    print("Os numeros sao iguais, nao ha periodos")
