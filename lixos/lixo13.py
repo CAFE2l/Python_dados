@@ -9,7 +9,7 @@ else:
             primo = False
             break
 
-        if numero == primo:
-            print(f"O numero {numero} e primo")
-        else:
-            print(f"O numero {numero} nao e primo")
+    if primo:
+        print(f"O numero {numero} e primo")
+    else:
+        print(f"O numero {numero} nao e primo")
